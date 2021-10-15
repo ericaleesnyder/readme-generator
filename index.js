@@ -1,21 +1,7 @@
-// TODO: Include packages needed for this application
-// inquirer
-// fs
 const fs = require('fs')
 const inquirer = require('inquirer')
+const generateReadme = require("./generateReadme")
 
-// TODO: Create an array of questions for user input
-// title of project (input - displayed as title of readme)
-//  Description (input)
-//  Table of Contents (links to sections of the document)
-//  Installation (input)
-//  Usage (input)
-//  License (select one)
-//  Contributing (input)
-//  Tests (input)
-//  Questions
-  // GitHub username (input - link)
-  // email address (input - includes instructions on how to reach me)
 const questions = [
   {
     name: "title",
@@ -23,35 +9,51 @@ const questions = [
     message: "What is the name of your application's github repository?"
   },
   {
-    name: "description",
+    name: "motivation",
     type: "input",
-    message: "Please write a brief description of your file"
+    message: "What was your motivation?"
+  },
+  {
+    name: "why",
+    type: "input",
+    message: "Why did you build this project?"
+  },
+  {
+    name: "problem",
+    type: "input",
+    message: "What problem does this application solve?"
+  },
+  {
+    name: "learned",
+    type: "input",
+    message: "What did you learn?"
   },
   {
     name: "installation",
     type: "input",
-    message: "What are the steps required to install your application?"
+    message: "Please list steps required for installation. If there are none, type 'none'."
   },
   {
-    name: "useage",
+    name: "usage",
     type: "input",
-    message: "What is the useage of this application?"
+    message: "What is the usage of this application?"
   },
   {
-    name: "license",
+    name: "badge",
     type: "list",
-    message: "What is license of your application?",
-    choices: ["a", "b", "c"]
+    message: "Please select a license:",
+    choices: ["MIT", "GPL v3", "No License"]
   },
   {
     name: "contributing",
-    type: "input",
-    message: "Please list any contributors",
+    type: "list",
+    message: "Please select contribution guidelines.",
+    choices: ["contributor covenant", "no contribution"]
   },
   {
     name: "tests",
     type: "input",
-    message: "Are there any tests that can be performed?",
+    message: "Please list tests that can be performed. If none, please type 'none'.",
   },
   {
     name: "github",
@@ -68,50 +70,10 @@ const questions = [
 inquirer.prompt(questions)
 .then((answers) => {
   console.log(answers);
-  //
   const fileName = "./output/README.md";
-  // COPY IN CONTENT FROM SAMPLE README FILE INTO FILECONTENT, REPLACE PLACEHOLDERS WITH ANSWERS.NAMES
-  const fileContent = 
-  `# ${answers.title}
-
-### Description
-
-${answers.description}
-
-The deployed version of the application can be found at:
-https://ericaleesnyder.github.io/${answers.title}/
-
-## Table of Contents
-1. Installation
-2. Useage
-3. License
-4. Contributing
-5. Tests
-6. Questions
-
-### Useage
-
-${answers.useage}
-
-### License
-
-The license for this application is ${answers.license}
-
-### Contributing
-
-Other contributors to this application are:
-${answers.contributing}
-
-### Tests
-
-You can run the following tests to ensure the application is functioning properly:
-${answers.tests}
-
-### Questions
-
-If you have any questions about this application, my github profile is ${answers.github}, and you can email me at ${answers.email}.
-`;
-
+  
+  const fileContent = generateReadme(answers)
+  
   fs.writeFile(fileName, fileContent, (err) =>
   err ? console.error(err) : console.log(`Readme saved as ${fileName}`))
 })

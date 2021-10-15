@@ -1,38 +1,45 @@
-# test
+# test-repo
 
-### Description
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-test
+## Description
+
+I had no motivation.
+
+test. 
+
+test.
+
+test.
 
 The deployed version of the application can be found at:
-https://ericaleesnyder.github.io/undefined/
+https://ericaleesnyder.github.io/test-repo/
 
-## Table of Contents
-1. Installation
-2. Useage
-3. License
-4. Contributing
-5. Tests
-6. Questions
+## Table of Contents 
+Remove sections that are not applicable.
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Questions](#questions)
 
-### Useage
+
+
+## Usage 
+Add screenshots as appropriate using the following syntax: 
+![alt text](relative path)
 
 test
 
-### License
+## License
 
-The license for this application is b
+The license for this application is MIT.
 
-### Contributing
 
-Other contributors to this application are:
-test
 
-### Tests
 
-You can run the following tests to ensure the application is functioning properly:
-test
 
-### Questions
+## Questions
 
-If you have any questions about this application, my github profile is test, and you can email me at test.
+If you have any questions about this application, my github profile is https://github.com/ericaleesnyder, and you can email me at ericaleesnyder@gmail.com. 
