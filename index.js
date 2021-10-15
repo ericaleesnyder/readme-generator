@@ -70,7 +70,7 @@ const questions = [
 inquirer.prompt(questions)
 .then((answers) => {
   console.log(answers);
-  const fileName = `./output/${answers.title}/README.md`;
+  const fileName = `./output/README.md`;
   
   const fileContent = generateReadme(answers)
   
