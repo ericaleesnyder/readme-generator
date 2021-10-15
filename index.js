@@ -70,16 +70,10 @@ const questions = [
 inquirer.prompt(questions)
 .then((answers) => {
   console.log(answers);
-  const fileName = "./output/README.md";
+  const fileName = `./output/${answers.title}/README.md`;
   
   const fileContent = generateReadme(answers)
   
   fs.writeFile(fileName, fileContent, (err) =>
-  err ? console.error(err) : console.log(`Readme saved as ${fileName}`))
+  err ? console.error(err) : console.log(`Success! README created: ${fileName}`))
 })
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();

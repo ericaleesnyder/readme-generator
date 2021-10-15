@@ -29,7 +29,7 @@ ${answers.installation}`
 
 function createLicense(answers) {
   let license;
-  if (answers.license === "No License") {
+  if (answers.badge === "No License") {
     license = ``;
   } else {
     license = `## License
