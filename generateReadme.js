@@ -17,7 +17,7 @@ function createBadge(answers) {
 function createInstall(answers) {
   let install
   if (answers.installation === "none") {
-    install = ""
+    install = ``
   } else {
     install = `## Installation
 
@@ -30,7 +30,7 @@ ${answers.installation}`
 function createLicense(answers) {
   let license;
   if (answers.license === "No License") {
-    license = "";
+    license = ``;
   } else {
     license = `## License
 
@@ -44,17 +44,15 @@ function createContribute(answers) {
   if (answers.contributing === "contributor covenant"){
     content = "## Contributing \n\nPlease refer to the [Contributor Covenant](https://www.contributor-covenant.org/) for contribution guidelines."
   } else {
-    content = "";
+    content = ``;
   }
   return content;
 }
 
-
-
 function createTests(answers) {
   let tests 
   if (answers.tests === "none") {
-    tests = "" 
+    tests = `` 
   } else {
     tests = `## Tests
 

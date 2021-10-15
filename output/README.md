@@ -1,19 +1,19 @@
-# test-repo
+# test
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ## Description
 
-I had no motivation.
+test
 
-test. 
+test
 
-test.
+test
 
-test.
+test
 
 The deployed version of the application can be found at:
-https://ericaleesnyder.github.io/test-repo/
+https://ericaleesnyder.github.io/test/
 
 ## Table of Contents 
 Remove sections that are not applicable.
@@ -34,7 +34,7 @@ test
 
 ## License
 
-The license for this application is MIT.
+The license for this application is No License.
 
 
 
