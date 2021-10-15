@@ -12,7 +12,7 @@ The fact that this project will do the heavy lifting of README creations for the
 
 Through this process I learned just how helpful linking multiple JavaScript files can be when trying to keep code clean and concise. 
 
-The deployed version of the application can be found at:
+The application can be found at:
 https://ericaleesnyder.github.io/readme-generator/
 
 ## Table of Contents 
